@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import Experience from "./Experience";
+import Experience from "./Experience.js";
 
 export default class  Camera{
     constructor(){
@@ -20,12 +20,19 @@ export default class  Camera{
             1000
             );
 
-            this.scene.add(this.perspectiveCamera)
+            this.scene.add(this.perspectiveCamera);
+            this.perspectiveCamera.position.z = 5;
     }
 
+
     createOrthographicCamera(){
+
+
+        
         this.frustrum = 5;
+
         this.orthographicCamera = new THREE.OrthographicCamera(
+
             (-this.sizes.aspect * this.sizes.frustrum)/2,
             (this.sizes.aspect * this.sizes.frustrum)/2,
             this.sizes.frustrum/2,
@@ -33,10 +40,11 @@ export default class  Camera{
             -100,
             100
 
+        
         );
-
-            this.scene.add(this.orthographicCamera);
-    }
+ this.scene.add(this.orthographicCamera);
+       
+        }
 
     resize(){
         //Updating Perspective Camera 📷 on Resize
@@ -46,9 +54,9 @@ export default class  Camera{
           //Updating Orthographic Camera 📷 on Resize
 
          this.orthographicCamera.left = 
-        (-this.sizes.aspect * this.sizes.frustrum)/2;
+             (-this.sizes.aspect * this.sizes.frustrum)/2;
          this.orthographicCamera.right= 
-        (this.sizes.aspect * this.sizes.frustrum)/2;
+             (this.sizes.aspect * this.sizes.frustrum)/2;
         this.orthographicCamera.top =   this.sizes.frustrum/2;
         this.orthographicCamera.bottom =   -this.sizes.frustrum/2;
         this.orthographicCamera.updateProjectionMatrix();
@@ -57,5 +65,4 @@ export default class  Camera{
 
     update(){
         
-    }
-}
+    }}

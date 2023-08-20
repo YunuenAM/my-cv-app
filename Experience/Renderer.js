@@ -1,5 +1,5 @@
-import * as THREE from 'three'
-import Experience from "./Experience";
+import * as THREE from 'three';
+import Experience from "./Experience.js";
 
 export default class  Renderer{
     constructor(){
@@ -11,6 +11,8 @@ export default class  Renderer{
 
          console.log(this.camera, this.camera.perspectiveCamera)
 
+        
+
          this.setRenderer();
     }
 
@@ -20,8 +22,8 @@ export default class  Renderer{
             antialias: true,
         });
 
-        this.renderer.physicallyCorrectLights = true;
-        this.renderer.outputEncoding = THREE.sRGBEncoding;
+       this.renderer.physicallyCorrectLights = false;
+        this.renderer.outputColorSpace = THREE.SRGBColorSpace;
         this.renderer.toneMapping = THREE.CineonToneMapping;
         this.renderer.toneMappingExposure = 1.75;
         this.renderer.shadowMap.enabled = true;
