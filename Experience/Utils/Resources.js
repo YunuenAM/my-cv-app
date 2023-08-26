@@ -41,6 +41,7 @@ export default class Resources extends EventEmitter{
                     this.video[asset.name].playsInline = true;
                     this.video[asset.name].autoplay = true;
                     this.video[asset.name].loop =true;
+                    this.video[asset.name].muted = true; // Esto desactivará el video, pero permitirá el audio.
                     this.video[asset.name].play();
 
                     this.videoTexture[asset.name]  = new THREE.VideoTexture(
@@ -51,7 +52,7 @@ export default class Resources extends EventEmitter{
                     this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
                     this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
                     this.videoTexture[asset.name].generateMipMaps = false;
-                    this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
+                    this.videoTexture[asset.name].colorSpace = THREE.sRGBEncoding;
 
                 }
         
