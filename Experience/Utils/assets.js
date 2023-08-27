@@ -2,13 +2,13 @@ export  default [
     {
         name: 'room',
         type: 'objModel',
-        path: '/models/deskcv.obj'
+        path: '/models/deskcvfrog.obj',
     },
 
     {
         name: 'screen',
         type: 'videoTexture',
-        path: '/textures/frog.mp4'
+        path: '/textures/frog.mp4',
 
     }
 ]

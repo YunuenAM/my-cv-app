@@ -1,7 +1,8 @@
 import * as THREE from  "three"
 import { EventEmitter } from "events";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"; 
 import Experience from "../Experience";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
+
 
 
 
@@ -9,7 +10,7 @@ export default class Resources extends EventEmitter{
   constructor(assets){
     super();
     this.experience = new Experience()
-    this.renderer = this.experience.renderer
+    this.renderer = this.experience.renderer;
 
     this.assets = assets;
 
@@ -38,10 +39,11 @@ export default class Resources extends EventEmitter{
 
                     this.video[asset.name]  = document.createElement('video');
                     this.video[asset.name].src = asset.path;
+                    this.video[asset.name].muted = true; // Esto desactivará el video, pero permitirá el audio.
                     this.video[asset.name].playsInline = true;
                     this.video[asset.name].autoplay = true;
                     this.video[asset.name].loop =true;
-                    this.video[asset.name].muted = true; // Esto desactivará el video, pero permitirá el audio.
+            
                     this.video[asset.name].play();
 
                     this.videoTexture[asset.name]  = new THREE.VideoTexture(
@@ -51,7 +53,7 @@ export default class Resources extends EventEmitter{
                     this.videoTexture[asset.name].flipY = true;
                     this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
                     this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
-                    this.videoTexture[asset.name].generateMipMaps = false;
+                    this.videoTexture[asset.name].generateMipmaps = false;
                     this.videoTexture[asset.name].colorSpace = THREE.sRGBEncoding;
 
                 }
