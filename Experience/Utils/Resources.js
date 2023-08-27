@@ -1,6 +1,7 @@
 import * as THREE from  "three"
 import { EventEmitter } from "events";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"; 
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
 import Experience from "../Experience";
 
 
@@ -26,13 +27,21 @@ export default class Resources extends EventEmitter{
     setLoaders(){
     this.loaders = {}
     this.loaders.objLoader = new  OBJLoader();
+    this.loaders.mtlLoader = new MTLLoader();
     }
     startLoading(){
         for (const asset of this.assets){
             if (asset.type === "objModel"){
-                this.loaders.objLoader.load(asset.path, (file)=>{
+                this.loaders.mtlLoader.load(asset.mtlPath, (materials) => {
+                    materials.preload();
+
+                    this.loaders.objLoader.setMaterials(materials);
+
+                   this.loaders.objLoader.load(asset.path, (file)=>{
                     this.singleAssetLoaded(asset,file);
                 });
+            });
+
                 } else if (asset.type === 'videoTexture'){
                     this.video = {};
                     this.videoTexture = {};
@@ -66,8 +75,9 @@ export default class Resources extends EventEmitter{
 
             this.items[asset.name] = file;
             this.loaded++;
-            console.log(file)
+           
             if(this.loaded === this.queue){
+        
                 this.emit('ready');
             }
 

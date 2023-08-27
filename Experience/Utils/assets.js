@@ -2,7 +2,8 @@ export  default [
     {
         name: 'room',
         type: 'objModel',
-        path: '/models/deskcvfrog.obj',
+        path: '/models/desk.obj', 
+        mtlPath: '/models/desk.mtl',
     },
 
     {
