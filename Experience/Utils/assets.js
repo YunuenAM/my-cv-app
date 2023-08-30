@@ -1,9 +1,9 @@
 export  default [
     {
         name: 'room',
-        type: 'objModel',
-        path: '/models/desk.obj', 
-        mtlPath: '/models/desk.mtl',
+        type: 'glbModel',
+        path: '/models/desk.glb', 
+       
     },
 
     {

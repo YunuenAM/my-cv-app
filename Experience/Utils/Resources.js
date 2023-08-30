@@ -1,7 +1,7 @@
 import * as THREE from  "three"
 import { EventEmitter } from "events";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"; 
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import Experience from "../Experience";
 
 
@@ -24,25 +24,25 @@ export default class Resources extends EventEmitter{
    
   }
 
-    setLoaders(){
-    this.loaders = {}
-    this.loaders.objLoader = new  OBJLoader();
-    this.loaders.mtlLoader = new MTLLoader();
-    }
+  setLoaders() {
+    this.loaders = {};
+    this.loaders.gltfLoader = new GLTFLoader();
+    this.loaders.dracoLoader = new DRACOLoader();
+    this.loaders.dracoLoader.setDecoderPath("/draco/");
+    this.loaders.gltfLoader.setDRACOLoader(this.loaders.dracoLoader);
+}
     startLoading(){
         for (const asset of this.assets){
-            if (asset.type === "objModel"){
-                this.loaders.mtlLoader.load(asset.mtlPath, (materials) => {
-                    materials.preload();
+            if (asset.type === "glbModel"){
+              
 
-                    this.loaders.objLoader.setMaterials(materials);
+                    this.loaders.gltfLoader.load(asset.path, (file)=>{
+                        this.singleAssetLoaded(asset,file)
+                    });
 
-                   this.loaders.objLoader.load(asset.path, (file)=>{
-                    this.singleAssetLoaded(asset,file);
-                });
-            });
-
-                } else if (asset.type === 'videoTexture'){
+                   
+              
+            } else if (asset.type === 'videoTexture'){
                     this.video = {};
                     this.videoTexture = {};
 
@@ -82,4 +82,4 @@ export default class Resources extends EventEmitter{
             }
 
         }
-    }
+}
