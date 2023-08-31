@@ -44,7 +44,7 @@ export default class  Camera{
 
         
         );
- this.scene.add(this.orthographicCamera);
+          this.scene.add(this.orthographicCamera);
 
           const  size = 10
           const divisions = 10;
