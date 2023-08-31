@@ -2,7 +2,7 @@ export  default [
     {
         name: 'room',
         type: 'gltfModel',
-        path: '/models/last.gltf', 
+        path: '/models/deskcv.gltf', 
        
     },
 
