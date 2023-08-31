@@ -6,6 +6,7 @@ export default class Room {
          this.experience = new Experience();
          this.scene = this.experience.scene;
          this.resources = this.experience.resources;
+         this.time = this.experience.time;
          this.room = this.resources.items.room;
          this.actualRoom = this.room.scene;
          console.log(this.room)
@@ -23,17 +24,24 @@ export default class Room {
             child.castShadow = true;
             child.receiveShadow = true;
 
-            // if (child instanceof THREE.Group){
-            //     child.children.forEach((groupchild)=>{
-            //         groupchild.child.castShadow = true;
-            // //         groupchild.child.receiveShadow = true;
-            //     })
-            // }
+        //     if (child instanceof THREE.Group){
+        //         child.children.forEach((groupchild)=>{
+        //             groupchild.child.castShadow = true;
+        //             groupchild.child.receiveShadow = true;
+        //         })
+        //     }
         })
         this.scene.add(this.actualRoom)
         this.actualRoom.scale.set(0.11,0.11, 0.11)
         
         
+    }
+
+    setAnimation(){
+        this.mixer = new  THREE.AnimationMixer(this.actualRoom);
+        this.swim = this.mixer.clipAction(this.room.animations[0])
+        this.swim.play();
+
     }
 
     
@@ -43,6 +51,8 @@ export default class Room {
    }
 
     update(){
+
+        this.mixer.update(this.time.delta);
     
         
     }
