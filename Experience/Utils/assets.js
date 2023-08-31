@@ -1,8 +1,8 @@
 export  default [
     {
         name: 'room',
-        type: 'glbModel',
-        path: '/models/desk.glb', 
+        type: 'gltfModel',
+        path: '/models/deskcv.gltf', 
        
     },
 

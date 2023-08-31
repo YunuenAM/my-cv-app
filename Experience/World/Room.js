@@ -19,12 +19,12 @@ export default class Room {
 
     setModel(){
 
-        this.room.children.forEach(children =>{
+        this.actualRoom.children.forEach(children =>{
             children.castShadow = true;
             children.receiveShadow = true;
         })
-        this.scene.add(this.room)
-        this.room.scale.set(0.11,0.11, 0.11)
+        this.scene.add(this.actualRoom)
+        this.actualRoom.scale.set(0.11,0.11, 0.11)
         
     }
 

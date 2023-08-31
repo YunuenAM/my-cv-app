@@ -33,7 +33,7 @@ export default class Resources extends EventEmitter{
 }
     startLoading(){
         for (const asset of this.assets){
-            if (asset.type === "glbModel"){
+            if (asset.type === "gltfModel"){
               
 
                     this.loaders.gltfLoader.load(asset.path, (file)=>{
