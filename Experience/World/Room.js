@@ -11,17 +11,32 @@ export default class Room {
         this.actualRoom = this.room.scene;
         this.roomChildren = {};
 
-       
-
+        //To create a botton
+        this.createPlayButton();
         this.setModel();
         this.setAnimation();
         this.setupVideoTexture();
+       
         
 
         
         
 
         
+    }
+
+    createPlayButton() {
+        this.playButton = document.createElement('button');
+        this.playButton.textContent = 'Reproducir Video';
+        this.playButton.style.position = 'absolute';
+        this.playButton.style.top = '20px';
+        this.playButton.style.left = '20px';
+        document.body.appendChild(this.playButton);
+
+        // Agrega un controlador de clic al botón
+        this.playButton.addEventListener('click', () => {
+            this.startVideoPlayback();
+        });
     }
 
     setModel() {
@@ -93,33 +108,35 @@ export default class Room {
     this.videoElement.muted = true;
     this.videoElement.setAttribute('crossorigin', 'anonymous');
 
-    // Cuando el video está listo, lo iniciamos
+    //Cuando el video está listo, lo iniciamos
     this.videoElement.addEventListener('canplay', () => {
-        console.log("Video canplay event triggered")
+       
         this.videoElement.play();
     });
+   
+}
+
+startVideoPlayback() {
+    // Inicia la reproducción del video cuando se haga clic en el botón
+    this.videoElement.play();
+
+    // Oculta el botón una vez que se inicie la reproducción
+    this.playButton.style.display = 'none';
 }
     
 
     resize() {}
 
     update() {
-       
+        // Actualiza la escena y la textura de video como lo hiciste antes
+        if (this.actualRoom) {
+            this.mixer.update(this.time.delta);
 
-       
-            this.mixer.update(this.time.delta)
-    
-            // Actualizar la textura de video en cada cuadro
-    //   if (this.actualRoom) {
-    //     this.actualRoom.children.forEach(child => {
-    //       if (child.name === 'pantalla') {
-    //         child.material.map.needsUpdate = true;
-        
-            
+            this.actualRoom.children.forEach(child => {
+                if (child.name === 'pantalla') {
+                    child.material.map.needsUpdate = true;
+                }
+            });
         }
-    
-   
-
-        
-
+    }
 }
