@@ -47,6 +47,7 @@ export default class Camera {
     }
 
     update() {
+        // console.log(this.perspectiveCamera.position)
         this.controls.update();
     }
 }
