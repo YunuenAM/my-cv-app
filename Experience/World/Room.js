@@ -131,6 +131,7 @@ onMouseMove() {
     this.videoElement.muted = false;
     this.videoElement.setAttribute('crossorigin', 'anonymous');
     this.scene.background = new THREE.Color(0xff7987) // Cambia 0xAAAAAA al color que desees
+    this.actualRoom.scale.set(0.3,0.3,0.3)
 
 
    
