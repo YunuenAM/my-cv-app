@@ -13,6 +13,7 @@ export default class Room {
 
         //To create a botton
         this.createPlayButton();
+        this.createPauseButton();
         this.setModel();
         this.setAnimation();
         this.setupVideoTexture();
@@ -27,7 +28,7 @@ export default class Room {
 
     createPlayButton() {
         this.playButton = document.createElement('button');
-        this.playButton.textContent = 'play audio';
+        this.playButton.textContent = 'Play audio';
         this.playButton.style.position = 'absolute';
         this.playButton.style.top = '20px';
         this.playButton.style.left = '20px';
@@ -36,6 +37,20 @@ export default class Room {
         // Agrega un controlador de clic al botón
         this.playButton.addEventListener('click', () => {
             this.startVideoPlayback();
+        });
+    }
+
+    createPauseButton() {
+        this.pauseButton = document.createElement('button');
+        this.pauseButton.textContent = 'Pause Audio';
+        this.pauseButton.style.position = 'absolute';
+        this.pauseButton.style.top = '60px';
+        this.pauseButton.style.left = '20px';
+        document.body.appendChild(this.pauseButton);
+
+        // Agregar un controlador de clic al botón de pausa
+        this.pauseButton.addEventListener('click', () => {
+            this.pauseVideoPlayback();
         });
     }
 
@@ -98,8 +113,14 @@ startVideoPlayback() {
 
     // Oculta el botón una vez que se inicie la reproducción
     this.playButton.style.display = 'none';
+    this.pauseButton.style.display = 'inline-block'; // Mostrar botón de pausa
 }
-    
+pauseVideoPlayback() {
+    // Pausar la reproducción del audio cuando se hace clic en el botón de pausa
+    this.videoElement.pause();
+    this.playButton.style.display = 'inline-block'; // Mostrar botón de reproducción
+    this.pauseButton.style.display = 'none'; // Ocultar botón de pausa
+}
 
     resize() {}
 
