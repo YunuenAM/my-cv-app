@@ -19,6 +19,16 @@
 
 }
 
+.content {
+  position: absolute;
+  top: 20px; /* Ajusta la posición superior según tus necesidades */
+  left: 20px; /* Ajusta la posición izquierda según tus necesidades */
+  z-index: 99999; /* Asegura que esté por encima de la escena 3D */
+  /* Otros estilos según tus necesidades */
+}
+
+
+
 /*Page Itself */
 .page{
   z-index:99999;
@@ -41,4 +51,7 @@
 .hero-wrapper{
   position: relative;
   height: 100%;
+  width: calc(100% -10rem);
+  margin: 0 auto;
+
 }

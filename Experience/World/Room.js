@@ -13,6 +13,7 @@ export default class Room {
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
         this.roomChildren = {};
+        
    
         this.lerp = {
             current: 0,
@@ -88,6 +89,15 @@ export default class Room {
             // Asignar el material a la parte de la background.511 que debe mostrar el video
             child.children[1].material = material;
         }
+        
+        child.scale.set(1, 1, 1);
+        if (child.name === "environment") {
+            // child.scale.set(1, 1, 1);
+            child.position.set(0, -1, 0);
+            child.rotation.y = Math.PI / 4;
+            child.rotation.set(0, Math.PI, 0);
+        }
+        this.roomChildren[child.name.toLowerCase()] = child;
         
     });
            
