@@ -40,9 +40,15 @@ export default class Room {
                 videoTexture.magFilter = THREE.LinearFilter;
                 videoTexture.format = THREE.RGBFormat;
 
-                child.children[1].material = new THREE.MeshBasicMaterial({
-                    map: videoTexture,
-                });
+                // Aplicar la textura de video al material de la pantalla
+            const material = new THREE.MeshBasicMaterial({
+                map: videoTexture,
+            });
+
+            // Asignar el material a la parte de la pantalla que debe mostrar el video
+            child.children[1].material = material;
+        }
+    });
            
 
             // if (
@@ -57,9 +63,9 @@ export default class Room {
             // ) {
             //     child.scale.set(0, 0, 0);
             // }
-            }
+           
           
-        });
+    
 
       
 
@@ -72,10 +78,12 @@ export default class Room {
     }
 
     setAnimation() {
-        this.mixer = new THREE.AnimationMixer(this.actualRoom);
-        this.swim = this.mixer.clipAction(this.room.animations[0]);
-        this.swim.play();
+        if (this.room.animations[0]) { // Verificar si existen animaciones
+            this.mixer = new THREE.AnimationMixer(this.actualRoom);
+            this.swim = this.mixer.clipAction(this.room.animations[0]);
+            this.swim.play();
     }
+}
 
 
     setupVideoTexture(){// Crear un elemento de video HTML
@@ -99,19 +107,19 @@ export default class Room {
        
 
        
-            this.mixer.update(this.time.delta);
+            this.mixer.update(this.time.delta)
     
             // Actualizar la textura de video en cada cuadro
-      if (this.actualRoom) {
-        this.actualRoom.children.forEach(child => {
-          if (child.name === 'pantalla') {
-            child.material.map.needsUpdate = true;
+    //   if (this.actualRoom) {
+    //     this.actualRoom.children.forEach(child => {
+    //       if (child.name === 'pantalla') {
+    //         child.material.map.needsUpdate = true;
         
             
         }
-    });
+    
    
 
         
 
-      }}}
+}
