@@ -19,6 +19,8 @@ export default class Room {
             current: 0,
             target: 0,
             ease: 0.1,
+
+           
         };
 
         //To create a botton
@@ -28,6 +30,10 @@ export default class Room {
         this.setAnimation();
         this.setupVideoTexture();
         this.onMouseMove();
+
+        //Add an eventListener for resize
+        window.addEventListener("resize", this.handleWindowResize.bind(this))
+        this.handleWindowResize()
        
         
 
@@ -152,6 +158,16 @@ pauseVideoPlayback() {
     this.videoElement.pause();
     this.playButton.style.display = 'inline-block'; // Mostrar botón de reproducción
     this.pauseButton.style.display = 'none'; // Ocultar botón de pausa
+}
+
+handleWindowResize(){
+    const newWidth = window.innerWidth;
+    const newHeight = window.innerHeight;
+
+    this.experience.renderer.setSize(newWidth, newHeight)
+
+    this.experience.camera.aspect = newWidth/newHeight;
+    this.experience.camera.updateProjectionMatrix()
 }
 
     resize() {}
