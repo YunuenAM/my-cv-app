@@ -60,7 +60,7 @@ export default class Camera {
     setOrbitControls() {
         this.controls = new OrbitControls(this.perspectiveCamera, this.canvas);
         this.controls.enableDamping = true;
-        this.controls.enableZoom = true;
+        this.controls.enableZoom = false;
     }
 
     addLights() {
@@ -73,9 +73,19 @@ export default class Camera {
     }
 
     resize() {
-        this.perspectiveCamera.aspect = this.sizes.width / this.sizes.height;
-        this.perspectiveCamera.updateProjectionMatrix();
-    }
+          // Updating Perspective Camera on Resize
+          this.perspectiveCamera.aspect = this.sizes.aspect;
+          this.perspectiveCamera.updateProjectionMatrix();
+  
+          // Updating Orthographic Camera on Resize
+          this.orthographicCamera.left =
+              (-this.sizes.aspect * this.sizes.frustrum) / 2;
+          this.orthographicCamera.right =
+              (this.sizes.aspect * this.sizes.frustrum) / 2;
+          this.orthographicCamera.top = this.sizes.frustrum / 2;
+          this.orthographicCamera.bottom = -this.sizes.frustrum / 2;
+          this.orthographicCamera.updateProjectionMatrix();
+      }
 
     update() {
         // console.log(this.perspectiveCamera.position)
