@@ -33,8 +33,9 @@ export default class Camera {
             (this.sizes.aspect * this.sizes.frustrum) / 2,
             this.sizes.frustrum / 2,
             -this.sizes.frustrum / 2,
-            -50,
-            50
+            -100,
+            100
+            
         );
 
         // 6.5
