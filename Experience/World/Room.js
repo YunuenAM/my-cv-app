@@ -9,7 +9,12 @@ export default class Room {
         this.time = this.experience.time;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
-        this.roomChildren = {};
+   
+        this.lerp = {
+            current: 0,
+            target: 0,
+            ease: 0.1,
+        }
 
         //To create a botton
         this.createPlayButton();
