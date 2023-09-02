@@ -2,12 +2,12 @@ export  default [
     {
         name: 'room',
         type: 'gltfModel',
-        path: '/models/desk.gltf', 
+        path: '/models/shy.gltf', 
        
     },
 
-    {
-        name: 'screen',
+    {   
+        name: 'Screen',
         type: 'videoTexture',
         path: '/textures/frog.mp4',
 
