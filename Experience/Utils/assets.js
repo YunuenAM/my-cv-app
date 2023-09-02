@@ -9,7 +9,7 @@ export  default [
     {   
         name: 'Screen',
         type: 'videoTexture',
-        path: '/textures/frog.mp4',
+        path: '/textures/shy.mp4',
 
     }
 ]

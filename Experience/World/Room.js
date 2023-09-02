@@ -27,7 +27,7 @@ export default class Room {
 
     createPlayButton() {
         this.playButton = document.createElement('button');
-        this.playButton.textContent = 'Reproducir Video';
+        this.playButton.textContent = 'play audio';
         this.playButton.style.position = 'absolute';
         this.playButton.style.top = '20px';
         this.playButton.style.left = '20px';
@@ -48,45 +48,24 @@ export default class Room {
 
            
 
-            if (child.name === "pantalla") {
+            if (child.name === "background.511") {
                 // Cambiar el material de la background.511 a un material básico con una textura de video
                 const videoTexture = new THREE.VideoTexture(this.videoElement);
                 videoTexture.minFilter = THREE.LinearFilter;
                 videoTexture.magFilter = THREE.LinearFilter;
                 videoTexture.format = THREE.RGBFormat;
 
-                // Aplicar la textura de video al material de la pantalla
+                // Aplicar la textura de video al material de la background.511
             const material = new THREE.MeshBasicMaterial({
                 map: videoTexture,
             });
 
-            // Asignar el material a la parte de la pantalla que debe mostrar el video
+            // Asignar el material a la parte de la background.511 que debe mostrar el video
             child.children[1].material = material;
         }
     });
            
 
-            // if (
-            //     child.name === "Mailbox" ||
-            //     child.name === "Lamp" ||
-            //     child.name === "FloorFirst" ||
-            //     child.name === "FloorSecond" ||
-            //     child.name === "FloorThird" ||
-            //     child.name === "Dirt" ||
-            //     child.name === "Flower1" ||
-            //     child.name === "Flower2"
-            // ) {
-            //     child.scale.set(0, 0, 0);
-            // }
-           
-          
-    
-
-      
-
-        // const rectLightHelper = new RectAreaLightHelper(rectLight);
-        // rectLight.add(rectLightHelper);
-        // console.log(this.room);
 
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.11, 0.11, 0.11);
@@ -103,18 +82,15 @@ export default class Room {
 
     setupVideoTexture(){// Crear un elemento de video HTML
     this.videoElement = document.createElement('video');
-    this.videoElement.src = '/textures/frog.mp4';
+    this.videoElement.src = '/textures/shy.mp4';
     this.videoElement.loop = true;
-    this.videoElement.muted = true;
+    this.videoElement.muted = false;
     this.videoElement.setAttribute('crossorigin', 'anonymous');
 
-    //Cuando el video está listo, lo iniciamos
-    this.videoElement.addEventListener('canplay', () => {
-       
-        this.videoElement.play();
-    });
    
-}
+    };
+   
+
 
 startVideoPlayback() {
     // Inicia la reproducción del video cuando se haga clic en el botón
@@ -133,7 +109,7 @@ startVideoPlayback() {
             this.mixer.update(this.time.delta);
 
             this.actualRoom.children.forEach(child => {
-                if (child.name === 'pantalla') {
+                if (child.name === 'background.511') {
                     child.material.map.needsUpdate = true;
                 }
             });
