@@ -17,9 +17,10 @@ export default class  Renderer{
     }
 
     setRenderer(){
-        this.renderer = new THREE.WebGLRenderer({
+        this.renderer = new THREE.WebGLRenderer ({
             canvas: this.canvas,
             antialias: true,
+            alpha: false
         });
 
       
