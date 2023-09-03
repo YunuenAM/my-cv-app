@@ -306,7 +306,8 @@ svg{
 
 .section-intro-wrapper{
   position: relative;
-  padding: 20% 5%;
+  height: 100vh;
+  padding: 5% 5%;
   border-bottom: 2px solid var(--color-pink);
   padding-bottom: 400px;
 }
