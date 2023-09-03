@@ -45,3 +45,33 @@
   position: relative;
 }
 
+
+
+
+
+  
+
+  @media (max-width: 767px) {
+  h1{
+        display: none; /* Oculta todos los encabezados */
+    }
+    h4{
+      display: block;
+    }
+
+  
+  }
+
+  .overlay-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.overlay-div h1,
+.overlay-div h2,
+.overlay-div h3,
+.overlay-div h4 {
+    margin: 5px 0;
+}

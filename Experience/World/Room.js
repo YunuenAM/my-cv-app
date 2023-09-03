@@ -44,8 +44,10 @@ export default class Room {
     }
 
     createPlayButton() {
+       
         this.playButton = document.createElement('button');
         this.playButton.textContent = 'Play audio';
+        this.playButton.classList.add('btn', 'btn-success');
         this.playButton.style.position = 'absolute';
         this.playButton.style.top = '20px';
         this.playButton.style.left = '20px';
@@ -60,6 +62,7 @@ export default class Room {
     createPauseButton() {
         this.pauseButton = document.createElement('button');
         this.pauseButton.textContent = 'Pause Audio';
+        this.pauseButton.classList.add('btn', 'btn-secondary'); 
         this.pauseButton.style.position = 'absolute';
         this.pauseButton.style.top = '60px';
         this.pauseButton.style.left = '20px';
@@ -169,6 +172,10 @@ handleWindowResize(){
     this.experience.camera.aspect = newWidth/newHeight;
     this.experience.camera.updateProjectionMatrix()
 }
+
+
+
+
 
     resize() {}
 
