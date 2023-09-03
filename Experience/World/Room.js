@@ -14,6 +14,8 @@ export default class Room {
         this.actualRoom = this.room.scene;
         this.roomChildren = {};
         
+
+   
    
         this.lerp = {
             current: 0,
@@ -30,6 +32,7 @@ export default class Room {
         this.setAnimation();
         this.setupVideoTexture();
         this.onMouseMove();
+        this.toggleTitles();
 
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
@@ -155,7 +158,11 @@ startVideoPlayback() {
     // Oculta el botón una vez que se inicie la reproducción
     this.playButton.style.display = 'none';
     this.pauseButton.style.display = 'inline-block'; // Mostrar botón de pausa
+
+
+  
 }
+
 pauseVideoPlayback() {
     // Pausar la reproducción del audio cuando se hace clic en el botón de pausa
     this.videoElement.pause();
@@ -172,6 +179,29 @@ handleWindowResize(){
     this.experience.camera.aspect = newWidth/newHeight;
     this.experience.camera.updateProjectionMatrix()
 }
+
+toggleTitles(){
+
+const welcomeTitle = document.getElementById("welcomeTitle");
+const newTitle = document.getElementById("new-title");
+
+
+
+ // Mostrar el elemento con id "welcomeTitle" después de otros 3 segundos (cambiar nuevamente)
+ setTimeout(function() {
+    welcomeTitle.style.display = "none";
+        newTitle.style.display = "block";
+
+        // Mostrar el elemento con id "welcomeTitle" después de otros 3 segundos (cambiar nuevamente)
+        setTimeout(function() {
+            welcomeTitle.style.display = "block";
+            newTitle.style.display = "none";
+        }, 2000); // 3000 milisegundos (3 segundos) para cambiar nuevamente
+    }, 2000); // 3000 milisegundos (3 segundos) para el primer cambio
+}
+
+
+
 
 
 
