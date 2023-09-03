@@ -470,3 +470,17 @@ svg{
   text-transform: uppercase;
   color: var(--color-text);
 }
+
+/*Image profile*/
+
+.yun{
+  width: 250px; /* Elige el tamaño que desees */
+  height: 250px; /* Elige el tamaño que desees */
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  overflow: hidden; /* Oculta cualquier contenido que se salga de la imagen redonda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: 25%;
+}
