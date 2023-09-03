@@ -86,6 +86,43 @@ svg{
 
   
   }
+
+  @media (max-width: 767px) {
+
+    .section-title-text{
+      font-size: 14px !important; 
+      color: palevioletred !important;
+      
+
+    }
+    .section-intro-wrapper{
+          width: 80%; 
+         margin: 0;
+      }
+      
+      .first-section  {
+        width: 30% !important;
+        height: 5%;
+        overflow: hidden;
+      }
+      .progress-wrapper {
+        width: 30% !important;
+        height: 5%;
+        overflow: hidden;
+
+      }
+
+      .progress-bar{
+
+        width: 30% !important;
+        height: 5%;
+        overflow: hidden;
+
+      }
+      }
+  
+    
+    
 /* Preloader */
 .preloader{
   background-color: var(--color-background-light);

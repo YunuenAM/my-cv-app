@@ -196,8 +196,8 @@ const newTitle = document.getElementById("new-title");
         setTimeout(function() {
             welcomeTitle.style.display = "block";
             newTitle.style.display = "none";
-        }, 2000); // 3000 milisegundos (3 segundos) para cambiar nuevamente
-    }, 2000); // 3000 milisegundos (3 segundos) para el primer cambio
+        }, 4000); // 3000 milisegundos (3 segundos) para cambiar nuevamente
+    }, 4000); // 3000 milisegundos (3 segundos) para el primer cambio
 }
 
 
