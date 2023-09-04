@@ -135,7 +135,7 @@ svg{
       }
 
       .section-text{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Dosis' !important;
         font-size: 12px !important;
       }
 
@@ -388,6 +388,8 @@ svg{
 }
 
 .section-text{
+  font-family:'Dosis';
+  font-size: 120px;
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
