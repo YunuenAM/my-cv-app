@@ -89,6 +89,20 @@ svg{
 
   @media (max-width: 767px) {
 
+    .yun{
+      width: 130px !important; /* Elige el tamaño que desees */
+      height: 130px !important; /* Elige el tamaño que desees */
+      border-radius: 50%; /* Esto hace que la imagen sea redonda */
+      overflow: hidden; /* Oculta cualquier contenido que se salga de la imagen redonda */
+     display:flex !important;
+    justify-content: start;
+    align-items: center;
+    margin-left: 0px !important;
+
+     
+
+    }
+
     .section-title-text{
       font-size: 14px !important; 
       color: palevioletred !important;
@@ -101,12 +115,12 @@ svg{
       }
       
       .first-section  {
-        width: 30% !important;
+        width: 50% !important;
         height: 5%;
         overflow: hidden;
       }
       .progress-wrapper {
-        width: 30% !important;
+        width: 50% !important;
         height: 5%;
         overflow: hidden;
 
@@ -114,11 +128,18 @@ svg{
 
       .progress-bar{
 
-        width: 30% !important;
+        width: 50% !important;
         height: 5%;
         overflow: hidden;
 
       }
+
+      .section-text{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px !important;
+      }
+
+      
       }
   
     
