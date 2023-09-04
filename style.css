@@ -259,8 +259,8 @@ svg{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  top: 48px;
-  right: 48px;
+  top: 100px;
+  right: 100px;
   z-index: 99999999999999;
 }
 
