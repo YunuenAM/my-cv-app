@@ -13,6 +13,8 @@ export default class  World{
          this.canvas = this.experience.canvas;    
          this.camera = this.experience.camera;
          this.resources = this.experience.resources;
+        
+
 
          this.resources.on('ready', ()=>{
 
@@ -22,7 +24,11 @@ export default class  World{
             this.controls = new Controls();
             
           
-         })
+         });
+
+         
+
+
          
   
 

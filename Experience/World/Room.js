@@ -1,6 +1,8 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
 import GSAP from  "gsap";
+import Theme from "./Theme.js";
+
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 
 
@@ -12,6 +14,12 @@ export default class Room {
         this.time = this.experience.time;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
+        this.theme = new Theme();
+        this.theme.on("switch", (newTheme) => {
+            this.handleThemeChange(newTheme);
+        });
+       
+        
         this.roomChildren = {};
         
 
@@ -36,6 +44,7 @@ export default class Room {
 
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
+        this.toggleDarkMode()
         this.handleWindowResize()
        
         
@@ -45,6 +54,18 @@ export default class Room {
 
         
     }
+
+    handleThemeChange(theme) {
+        if (theme === 'dark') {
+            this.scene.background = new THREE.Color(0x111111);
+        } else {
+            this.scene.background = new THREE.Color(0xffffff);
+        }
+    }
+    toggleDarkMode() {
+        this.theme.toggleDarkMode();
+    }
+
 
     createPlayButton() {
        
@@ -170,6 +191,15 @@ pauseVideoPlayback() {
     this.pauseButton.style.display = 'none'; // Ocultar botón de pausa
 }
 
+handleThemeChange(theme){
+    if (theme === 'dark'){
+        this.scene.background= new THREE.Color(0x111111)
+    }else{ 
+        this.scene.background = new THREE.Color(0xffffff)
+    }
+    
+}
+
 handleWindowResize(){
     const newWidth = window.innerWidth;
     const newHeight = window.innerHeight;
@@ -200,10 +230,16 @@ const newTitle = document.getElementById("new-title");
     }, 4000); // 3000 milisegundos (3 segundos) para el primer cambio
 }
 
+    // Función para cambiar entre el modo claro y oscuro
 
+    toggleDarkMode(){
 
+        document.body.classList.toggle('dark-mode')
 
+        document.querySelector('toggle-button').addEventListener('click', this.toggleDarkMode)
 
+    }
+   
 
 
 
