@@ -509,3 +509,20 @@ svg{
   padding: 30px;
   margin-left: 25%;
 }
+
+/*Mode*/
+
+/* En tu hoja de estilos CSS */
+.dark-theme {
+  /* Estilos para el modo oscuro */
+  background-color: #242340;
+  color: #ffffff;
+  /* Agrega cualquier otro estilo necesario */
+}
+
+.light-theme {
+  /* Estilos para el modo claro */
+  background-color: #FF7987;
+  color: #000000;
+  /* Agrega cualquier otro estilo necesario */
+}

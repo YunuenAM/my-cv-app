@@ -59,7 +59,7 @@ export default class Room {
         if (theme === 'dark') {
             this.scene.background = new THREE.Color(0x111111);
         } else {
-            this.scene.background = new THREE.Color(0xffffff);
+            this.scene.background = new THREE.Color(255 / 255, 121 / 255, 135 / 255);
         }
     }
     toggleDarkMode() {
