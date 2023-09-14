@@ -526,3 +526,16 @@ svg{
   color: #000000;
   /* Agrega cualquier otro estilo necesario */
 }
+
+/* Estilo por defecto para el modo claro */
+
+
+/* Primero, asegúrate de que tu CSS tenga soporte para prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  .moon-wrapper {
+    background-image: url('http://www.w3.org/2000/svg');
+    /* Ajusta la propiedad background-size según sea necesario */
+    background-size: cover;
+  }
+}
+

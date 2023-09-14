@@ -8,8 +8,9 @@ export default class Theme extends EventEmitter {
 
         this.toggleButton = document.querySelector(".toggle-button");
         this.toggleCircle = document.querySelector(".toggle-circle");
-
+        
         this.setEventListeners();
+       
     }
 
     setEventListeners() {
@@ -23,4 +24,6 @@ export default class Theme extends EventEmitter {
             this.emit("switch", this.theme);
         });
     }
+
+   
 }

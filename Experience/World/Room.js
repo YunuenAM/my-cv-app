@@ -239,8 +239,8 @@ const newTitle = document.getElementById("new-title");
         document.querySelector('toggle-button').addEventListener('click', this.toggleDarkMode)
 
     }
-   
 
+    
 
 
     resize() {}
