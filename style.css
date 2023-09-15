@@ -104,7 +104,7 @@ svg{
     }
 
     .section-title-text{
-      font-size: 14px !important; 
+      font-size: 16px !important; 
       color: palevioletred !important;
       
 
@@ -115,12 +115,12 @@ svg{
       }
       
       .first-section  {
-        width: 50% !important;
+        width: 100% !important;
         height: 5%;
         overflow: hidden;
       }
       .progress-wrapper {
-        width: 50% !important;
+        width: 60% !important;
         height: 5%;
         overflow: hidden;
 
@@ -128,7 +128,7 @@ svg{
 
       .progress-bar{
 
-        width: 50% !important;
+        width: 60% !important;
         height: 5%;
         overflow: hidden;
 
@@ -136,8 +136,22 @@ svg{
 
       .section-text{
         font-family: 'Dosis' !important;
-        font-size: 12px !important;
+        font-size: 16px !important;
       }
+
+      .second-section{
+        
+        width: 200% !important;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+     .section-detail-wrapper{
+      width: 80%;
+     }
 
       
       }
@@ -323,6 +337,12 @@ svg{
   overflow: hidden;
 }
 
+.second-section{
+  padding: 150px 3%;
+  color: #8395CD;
+}
+
+
 .left{
   margin-right: auto;
   border-top-right-radius: 700px 700px;
@@ -444,7 +464,7 @@ svg{
 
 .section-number{
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   right: 0;
   color: var(--color-pink);
   font-size: 24px;
@@ -538,4 +558,14 @@ svg{
     background-size: cover;
   }
 }
+
+ul li {
+   font-weight: normal;
+   font-family: 'Dosis' ;
+}
+
+
+  
+
+
 
