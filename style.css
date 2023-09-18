@@ -120,7 +120,7 @@ svg{
         overflow: hidden;
       }
       .progress-wrapper {
-        width: 60% !important;
+        width: 70% !important;
         height: 5%;
         overflow: hidden;
 
@@ -128,7 +128,7 @@ svg{
 
       .progress-bar{
 
-        width: 60% !important;
+        width: 70% !important;
         height: 5%;
         overflow: hidden;
 
@@ -151,6 +151,16 @@ svg{
 
      .section-detail-wrapper{
       width: 80%;
+     }
+
+     .back{
+      width: 70%;
+      height: auto;
+     }
+
+     .game{
+      width: 70%;
+      height: auto;
      }
 
       

@@ -81,7 +81,7 @@
             <div class="section-detail-wrapper">
               <!-- <h3 class="section-heading">Hello!</h3> -->
               <img class="yun" src="./Experience/img/yuna.jpg" width="10px" alt="">
-              <p class="section-text">Hi 👋, I'm Yunuen Sarasuadi Acosta Meza(She/Her) . I'm a Jr. Full stack development from Mexico. I really enjoy web design.I develop software applying clean code principles. I'm interested in ecommerce development and digital arts. </p>
+              <p class="section-text">Hi 👋, I'm Yunuen Sarasuadi Acosta Meza(She/Her) from Mexico. I'm a  full stack developer focused on Front end. I really enjoy web design.I develop software applying clean code principles. I'm interested in ecommerce development and digital arts. </p>
               <p class="section-text"> 
                 🌱 I'm currently learning AWS, ASP.NET CORE 6.0, Blender
 
@@ -173,7 +173,7 @@
                 </p>
 
 
-               <p class="section-text"> Let's connect! <br> yunameza@outlook.com
+               <p class="section-text"> Let's connect! 
                 <i class="bi bi-envelope-paper"></i>
                </p>
 
@@ -235,16 +235,16 @@
                  </div>
                  
                  <h3 class="section-heading">Back end</h3>
-                 <h3 class="section-heading">Ecommerce Back end</h3>
-                   <img src="./Experience/img/postman.gif" alt="postman" width="250px" height="110px">
+                 <h3 class="section-heading">Ecommerce </br> Back end</h3>
+                   <img class="back"  src="./Experience/img/postman.gif" alt="postman" width="250px" height="110px">
                    <p class="section-text">This backend should be tested in postman. It's about users, administrators, orders and products</p>
-                   <p class="section-text">MongoDB Compass, Express, Node.js</p>
+                   <p class="section-text">MongoDB, Express, Node.js</p>
                    <p class="section-text">To see the complete project click on <a href="https://drab-pink-leopard-kit.cyclic.app">Visit here</a></p>
                
 
                  <h3 class="section-heading">More</h3>
                  <h3 class="section-heading">VideoGame</h3>
-                   <img src="./Experience/img/immune.gif" alt="immune" width="250px" height="110px">
+                   <img class="game" src="./Experience/img/immune.gif" alt="immune" width="250px" height="110px">
                    <p class="section-text"> </p>
                    <p class="section-text">Inkscape,Gimp, Unity</p>
                    <p class="section-text">To see the complete project click on <a href="https://www.microsoft.com/en-ms/p/immune/9wzdncrdr6x8?activetab=pivot:overviewtab">Visit here</a></p>
@@ -255,7 +255,8 @@
                    <div class="container">
                     <h2>Contact Me</h2>
                     <div class="contact-form">
-                        <form action="process_contact.php" method="post">
+                        <form id="form" data-swal-title="Success"  action="https://formspree.io/f/mleylaqz"
+                        method="POST">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
             
@@ -292,6 +293,9 @@
     createPauseButton();
    
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   </body>
 
 
