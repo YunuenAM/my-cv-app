@@ -256,14 +256,17 @@ const newTitle = document.getElementById("new-title");
 
    animateText() {
         const textElement = document.getElementById('animated-text');
-        const text = "Hello welcome to my portfolio,\nscroll down please ";
-        const frogImage = '<img class= "frog" src= "./Experience/img/welcome-back.png" width= "100px" alt="welcome" >';
+        const text = "hello! welcome to my portfolio,scroll down please ";
+        const frogImage = '<img class= "frog" src= "./Experience/img/welcome-back.png" width= "500px" alt="welcome" >';
+        textElement.style.fontSize = "2rem";
+        textElement.style.fontFamily = 'Dosis'
         let index = 0;
     
         function typeText() {
             if (index < text.length) {
                 if (text.charAt(index) === "\n") {
-                    textElement.innerHTML += "<br>"; // Agregamos un elemento <br> para el salto de línea
+                    textElement.innerHTML += "<br>"; 
+                 // Agregamos un elemento <br> para el salto de línea
                 } else {
                     textElement.innerHTML += text.charAt(index);
                 }

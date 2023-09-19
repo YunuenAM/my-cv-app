@@ -20,7 +20,7 @@ svg{
   transition: background-color 0.5s, color 0.5s;
 }
 
-:root{
+:root {
   /* Light Theme Variables */
   --color-text-light: #333332;
   --color-background-light: #FAF4E5;
@@ -33,7 +33,7 @@ svg{
   --color-background-dark: #8395CD;
 }
 
-.light-theme{
+.light-theme {
   --color-text: var(--color-text-light);
   --color-background: var(--color-background-light);
   --color-pink: var(--color-pink-light);
@@ -41,13 +41,19 @@ svg{
   --color-blue: var(--color-blue-light);
 }
 
-.dark-theme{
+.dark-theme {
   --color-text: var(--color-text-dark);
   --color-background: var(--color-background-dark);
   --color-pink: var(--color-text-dark);
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
 }
+
+/* Otros estilos de elementos, como botones, encabezados, etc. */
+
+
+
+
 
 /* Otros estilos de elementos, como botones, encabezados, etc. */
 button {
@@ -86,204 +92,6 @@ button {
   width: 100% !important;
   height: 5%;
   overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  h1{
-        display: none; /* Oculta todos los encabezados */
-    }
-    h4{
-      display: block;
-    }
-
-  
-  }
-
-  @media (max-width: 767px) {
-
-    .yun{
-      width: 130px !important; /* Elige el tamaño que desees */
-      height: 130px !important; /* Elige el tamaño que desees */
-      border-radius: 50%; /* Esto hace que la imagen sea redonda */
-      overflow: hidden; /* Oculta cualquier contenido que se salga de la imagen redonda */
-     display:flex !important;
-    justify-content: start;
-    align-items: center;
-    margin-left: 0px !important;
-
-     
-
-    }
-
-    .section-title-text{
-      font-size: 16px !important; 
-      color: palevioletred !important;
-      
-
-    }
-    .section-intro-wrapper{
-          width: 80%; 
-         margin: 0;
-      }
-      
-      .first-section  {
-        width: 100% !important;
-        height: 5%;
-        overflow: hidden;
-      }
-      .progress-wrapper {
-        width: 70% !important;
-        height: 5%;
-        overflow: hidden;
-
-      }
-
-      .progress-bar{
-        width: 70% !important;
-        height: 5%;
-        overflow: hidden;
-
-      }
-
-      .section-text{
-        font-family: 'Dosis' !important;
-        font-size: 16px !important;
-      }
-
-      .second-section{
-        
-        width: 200% !important;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-     .section-detail-wrapper{
-      width: 100%;
-     }
-
-     .back{
-      width: 70%;
-      height: auto;
-     }
-
-     .game{
-      width: 70%;
-      height: auto;
-     }
-
-      
-      }
-  
-    
-    
-/* Preloader */
-.preloader{
-  background-color: var(--color-background-light);
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  opacity: 1;
-  z-index: 99999999999999999;
-}
-
-.preloader-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 6px;
-  background-color: var(--color-pink-light);
-  animation: load 1s ease-in-out infinite;
-}
-
-.circle:nth-child(2){
-  animation-delay: 0.1s;
-}
-
-.circle:nth-child(3){
-  animation-delay: 0.2s;
-}
-
-@keyframes load {
-  0% {
-    transform: translateY(0)
-  }
-
-  20% {
-    transform: translateY(-12px)
-  }
-
-  40% {
-    transform: translateY(0)
-  }
-  
-}
-
-/* Page Itself --------------------------------------------- */
-.page{
-  z-index:99999;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.page-wrapper{
-  position: relative;
-}
-
-/* Preloader Stuff */
-.animatedis{
-  display: inline-block;
-  transform: translateY(100%);
-}
-
-.intro-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--color-text);
-  transform: translate(-50%, -50%);
-}
-
-.arrow-svg-wrapper{
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  opacity: 0;
-  color: var(--color-text);
-  transform: translate(-50%, -50%);
-  animation: bounce 0.5s ease-in alternate infinite;
-}
-
-@keyframes bounce {
-  0%{
-    transform: translateY(0)
-  }
-
-  100%{
-    transform: translateY(8px)
-  }
 }
 
 /* Toggle Bar --------------------------------------------- */
@@ -350,10 +158,10 @@ button {
   width: 100%;
 }
 
-.section{
+.section-beige{
   position: relative;
-  width: 50%;
-  padding: 1000px 4%;
+  width: 58%;
+  padding: 100px 10%;
   margin: 0;
   background-color: var(--color-background);
   overflow: hidden;
@@ -421,6 +229,7 @@ button {
 .section-detail-wrapper{
   position: relative;
   padding: 20% 5%;
+  left: 15%;
 }
 
 .section-heading{
@@ -433,10 +242,11 @@ button {
 
 .section-text{
   font-family:'Dosis'; 
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2;
   margin-top: 10px;
   color: var(--color-text);
+  text-align: left;
 }
 
 /* Fancy Decoration Part of Section */
@@ -447,7 +257,7 @@ button {
 
 .section-title-text{
   display: block;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
 
   transform-origin: left;
@@ -570,7 +380,7 @@ ul li {
 
 
 /* Primero, asegúrate de que tu CSS tenga soporte para prefers-color-scheme */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: blue) {
   .moon-wrapper {
     background-image: url('http://www.w3.org/2000/svg');
     /* Ajusta la propiedad background-size según sea necesario */
@@ -592,7 +402,7 @@ ul li {
 }
 
 .contact-form {
-  background-color: #FF7987;
+  background-color: gray;
   padding: 10px;
   border-radius: 5px;
   width: 500px;
@@ -621,8 +431,5 @@ ul li {
   .container {
       width: 90%;
   }
-
-  
-
 }
 
