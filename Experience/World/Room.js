@@ -3,6 +3,8 @@ import Experience from "../Experience.js";
 import GSAP from  "gsap";
 import Theme from "./Theme.js";
 
+
+
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 
 
@@ -36,6 +38,7 @@ export default class Room {
         //To create a botton
         this.createPlayButton();
         this.createPauseButton();
+        this.animateText()
         this.setModel();
         this.setAnimation();
         this.setupVideoTexture();
@@ -46,6 +49,7 @@ export default class Room {
         window.addEventListener("resize", this.handleWindowResize.bind(this))
         this.toggleDarkMode()
         this.handleWindowResize()
+       
        
         
 
@@ -239,6 +243,34 @@ const newTitle = document.getElementById("new-title");
         document.querySelector('toggle-button').addEventListener('click', this.toggleDarkMode)
 
     }
+
+    ////////////////////////////////////////////
+
+   animateText() {
+        const textElement = document.getElementById('animated-text');
+        const text = "Hello welcome to my portfolio,\nscroll down please ";
+        const frogImage = '<img class= "frog" src= "./Experience/img/frog.png" width= "40px" alt="frog" >';
+        let index = 0;
+    
+        function typeText() {
+            if (index < text.length) {
+                if (text.charAt(index) === "\n") {
+                    textElement.innerHTML += "<br>"; // Agregamos un elemento <br> para el salto de línea
+                } else {
+                    textElement.innerHTML += text.charAt(index);
+                }
+                index++;
+                setTimeout(typeText, 100); // Llama a typeText después de un retraso de 100 ms
+            } else if (index === text.length) {
+                textElement.innerHTML += frogImage;
+                index++;
+            }
+        }
+    
+        typeText(); // Llama a typeText para iniciar la animación del texto
+    }
+
+
 
     
 

@@ -49,7 +49,13 @@ svg{
   --color-blue: var(--color-text-dark);
 }
 
-/*Experience  */
+/* Otros estilos de elementos, como botones, encabezados, etc. */
+button {
+  background-color: var(--color-blue);
+  color: var(--color-text);
+}
+
+
 
 
 .experience{
@@ -295,6 +301,7 @@ svg{
   justify-content: center;
   align-items: center;
   color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 .toggle-button{
@@ -305,7 +312,7 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-pink);
+  background-color: var(--color-pink-light);
   border-radius: 999px;
   margin: 0px ;
   margin-left: 200px;
@@ -542,19 +549,7 @@ svg{
 /*Mode*/
 
 /* En tu hoja de estilos CSS */
-.dark-theme {
-  /* Estilos para el modo oscuro */
-  background-color: #242340;
-  color: #ffffff;
-  /* Agrega cualquier otro estilo necesario */
-}
 
-.light-theme {
-  /* Estilos para el modo claro */
-  background-color: #FF7987;
-  color: #000000;
-  /* Agrega cualquier otro estilo necesario */
-}
 
 /* Estilo por defecto para el modo claro */
 
