@@ -5,6 +5,7 @@ import Theme from "./Theme.js";
 
 
 
+
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 
 
@@ -19,6 +20,12 @@ export default class Room {
         this.theme = new Theme();
         this.theme.on("switch", (newTheme) => {
             this.handleThemeChange(newTheme);
+    
+            this.scene.addEventListener("click", () => {
+                this.openModal();
+              });
+
+              
         });
        
         
@@ -48,7 +55,9 @@ export default class Room {
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
         this.toggleDarkMode()
+        this.modal()
         this.handleWindowResize()
+      
        
        
         
@@ -272,8 +281,11 @@ const newTitle = document.getElementById("new-title");
 
 
 
-    
 
+    
+    
+    
+    
 
     resize() {}
 

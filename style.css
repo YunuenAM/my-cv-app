@@ -82,6 +82,12 @@ button {
   /* Otros estilos según tus necesidades */
 }
 
+.first-section  {
+  width: 90% !important;
+  height: 5%;
+  overflow: hidden;
+}
+
 @media (max-width: 767px) {
   h1{
         display: none; /* Oculta todos los encabezados */
@@ -155,7 +161,7 @@ button {
       }
 
      .section-detail-wrapper{
-      width: 80%;
+      width: 100%;
      }
 
      .back{
@@ -570,6 +576,7 @@ ul li {
 
 
 .container {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;

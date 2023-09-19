@@ -22,7 +22,7 @@ export default class Camera {
             1000
         );
 
-        this.perspectiveCamera.position.set(-40, 10, -20);
+        this.perspectiveCamera.position.set(-10.1,25);
        
         
     
