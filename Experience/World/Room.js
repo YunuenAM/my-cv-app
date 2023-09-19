@@ -55,7 +55,6 @@ export default class Room {
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
         this.toggleDarkMode()
-        this.modal()
         this.handleWindowResize()
       
        
@@ -258,7 +257,7 @@ const newTitle = document.getElementById("new-title");
    animateText() {
         const textElement = document.getElementById('animated-text');
         const text = "Hello welcome to my portfolio,\nscroll down please ";
-        const frogImage = '<img class= "frog" src= "./Experience/img/frog.png" width= "40px" alt="frog" >';
+        const frogImage = '<img class= "frog" src= "./Experience/img/welcome-back.png" width= "100px" alt="welcome" >';
         let index = 0;
     
         function typeText() {
