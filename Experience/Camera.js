@@ -16,13 +16,20 @@ export default class Camera {
 
     createPerspectiveCamera() {
         this.perspectiveCamera = new THREE.PerspectiveCamera(
-            35,
+            8,
             this.sizes.width / this.sizes.height,
             0.1,
             1000
         );
 
-        this.perspectiveCamera.position.set(0, 5, 10);
+        this.perspectiveCamera.position.set(-40, 10, -20);
+       
+        
+    
+
+        
+
+    
         this.scene.add(this.perspectiveCamera);
     }
 
@@ -90,5 +97,7 @@ export default class Camera {
     update() {
         // console.log(this.perspectiveCamera.position)
         this.controls.update();
+
+
     }
 }
