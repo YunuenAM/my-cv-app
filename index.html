@@ -1,122 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
-    <title>Yunuen AM</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
- <!-- Agregar Bootstrap CSS -->
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name='viewport'
+    content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+  <title>Yunuen AM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+  <!-- Agregar Bootstrap CSS -->
+</head>
 
 
 
 
-  <body class="light-theme">
+<body class="light-theme">
 
-    <div class="experience">   
-            
-      <canvas class="experience-canvas">
-        
-      </canvas>
-    </div>
-       
+  <div class="experience">
 
-    <div class="content">
+    <canvas class="experience-canvas">
+
+    </canvas>
+  </div>
 
 
-  <div id="textElement"></div>
-      
-     
-    </div>
+  <div class="content">
 
-    
-    
 
-    <div class="sun-wrapper">
-   
-        </div>
-        
-        <button  class="toggle-button">
-          <div class="toggle-circle"></div>
-          <i id="brightnessIcon"  class="bi bi-brightness-high"></i>
-          <i id="moonIcon" class="bi bi-moon-fill"></i>
-        </button> 
+    <div id="textElement"></div>
 
-        <div class="moon-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg"  height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
-    
-      
-      <div class="page-wrapper">
-        
-        <section class="hero">
 
-          <div class="hero-wrapper">
-            <div class="container text-xl-center">
-                <div id="animated-text"></div>
-            </div>
-        
-            
-    </div>
+  </div>
 
-    </section>
 
-    <section class="section-beige">
 
-      <div class="row text'align-content-center  ">
 
-        <h2 class="font">Jr. Full Stack Web Developer</h2>
+  <div class="sun-wrapper">
 
-        <div>
-          <img src="./Experience/img/me.jpg"  class="yun">
+  </div>
+
+  <button class="toggle-button">
+    <div class="toggle-circle"></div>
+    <i id="brightnessIcon" class="bi bi-brightness-high"></i>
+    <i id="moonIcon" class="bi bi-moon-fill"></i>
+  </button>
+
+  <div class="moon-wrapper">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+      <path fill="currentColor"
+        d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z" />
+    </svg>
+
+
+    <div class="page-wrapper">
+
+      <section class="hero">
+
+        <div class="hero-wrapper">
+          <div class="container text-xl-center">
+            <div id="animated-text"></div>
+          </div>
+
+
         </div>
 
-        <p class="font-p">
-          Hi 👋, I'm Yunuen Sarasuadi Acosta Meza(She/Her) from Mexico. I'm a  full stack developer focused on Front end. I really enjoy web design. My goal is develop software applying clean code principles. I'm interested in ecommerce development. 
+      </section>
 
-        </p>
-      </div>
+      <section class="section-beige">
+
+        <div class="row text'align-content-center  ">
+
+          <h2 class="font">Jr. Full Stack Web Developer</h2>
+
+          <div>
+            <img src="./Experience/img/me.jpg" class="yun">
+          </div>
+
+          <p class="font-p">
+            Hi 👋, I'm Yunuen Sarasuadi Acosta Meza(She/Her) from Mexico. I'm a full stack developer focused on Front
+            end and
+            I really enjoy web design and create solutions. My goal is develop software applying clean code principles.
+            I'm interested in ecommerce development and cloud computing, but I'm willing to listen interesting job
+            offers.
+            </br>
+            🌱 I'm currently learning AWS and ASP.NET CORE 6.0.
+
+            </br>
+            💬 Ask me about: JavaScript, React, HTML5, CSS3.
+            </br>
+            ⚡ Fun fact, I think I'm a fan of frogs 🐸
+
+            </br>
+            </br>
+
+            👩🏽‍🎓 Education
+
+            </br>
+            -Visual Programming (2012) CETEC and Secretary of Labor and social Protection
+            </br>
+            -Linguistics Degree (2016) ENAH
+            </br>
+            -Design and Visual Communication (2014-2016) UNAM
+            </br>
+            -Web development bootcamp (2023) DEV.F
+            </br>
+            </br>
+
+            📎 Certifications
+
+            </br>
+            -VideoGames for Windows 8 (2013) A Microsoft Learning Workshop[60 hrs of training]
+            </br>
+            -JavaScript (2023) CoderHouse ✨Top 10
+            </br>
+            -Git+GitHub: A complete control of version systems(2023) Udemy
+            </br>
+            -Introduction to Google SEO(2019) Coursera
+            </br>
+            </br>
 
 
-    
+            🖥️ Workshops
 
-    
- 
+            </br>
+            -Voice, technology and some applications(2019) Teacher in Mexican Women of the future at IIMAS
+            </br>
 
-             
-
-        
-                
-
-                
-
-</div>
-</div>
+            </br>
 
 
 
-        
+            🗣️ Conferences
+
+            </br>
+            -IX Computational Linguistics Colloquium: Acoustic reference values ​​for the forensic analysis of
+            recordings: the case of /a/ in read speech (2019) UNAM, México
+            </br>
+            - Databases in forensic voice identification (2022) National University of San Marcos, Perú
+            </br>
+            </br>
 
 
-   
+            💼Experience
+            </br>
+            -Trilingual(spanish/english/french) customer service (2020) TKM Customer Solutions
+            </br>
+            <br>
+
+            👅Languages
+            </br>
+            -Spanish: native speaker
+            </br>
+            -English: complete professional competence
+            </br>
+            -French:  basic professional competence
+            </br>
+
+            <br>
+
+            🖱️💻My Work
+            </br>
+
+            <h3>Front end</h3>
+
+          </br>
+        </br>
+              <h3 class="font-p">Bakery Ecommerce</h3>
+      </br>
+              <img src="./Experience/img/Bakery.gif" alt="bakery" width="500px" height="250px">
+              <p class="section-text">About: It was in the top 10 of my Javascript course and published on the CoderHouse student projects web site</p>
+              <p class="section-text">Technologies: JavaScript, Bootstrap, HTML5, CSS3</p>
+              <p class="section-text">Only desktop version</br><a href="https://64c7cc5c7a450d0c24e256a4--superlative-licorice-3ab2ec.netlify.app/">Visit here</a></p>
+
+            </br>
+          </br>
+        </br>
+      </br>
+            <h3 class="font-p">Jolitify Ecommerce</h3>
+    </br>
+            <img src="./Experience/img/jolitify.gif" alt="jolitify" width="500px" height="250px">
+            <p class="section-text">About: This project is a product ecommerce, provides information to the user from an API</p>
+            <p class="section-text">Technologies: Vite, React, Express</p>
+            <p class="section-text">Only desktop version</br><a href="https://deploy-test-01-ecommerce-pink-ecommerce.netlify.app/">Visit here</a></p>
+
+          </br>
+        </br>
+      </br>
+    </br>
+          <h3 class="font-p">Series Project</h3>
+  </br>
+          <img src="./Experience/img/series.gif" alt="series" width="500px" height="250px">
+          <p class="section-text">About:  This project is about series website</p>
+          <p class="section-text">Technologies: Vite ,React & Bootstrap</p>
+          <p class="section-text">Mobile and Desktop available <a href="https://series-project.netlify.app/">Visit here</a></p>
+
+        </br>
+      </br>
+    </br>
+  </br>
+        <h3 class="font-p">Clon pinterest.es</h3>
+</br>
+        <img src="./Experience/img/clonPinterest.gif" alt="pinterestClon" width="500px" height="250px">
+        <p class="section-text">About: This product tries to be a pinterest clone</p>
+        <p class="section-text">Technologies: HTML5, CSS3</p>
+        <p class="section-text">Mobile and desktop available <a href="https://6504bd6cdf5e46259f967496--lively-kleicha-b76ec7.netlify.app/">Visit here</a></p>
+
+      </br>
+    </br>
+  </br>
+</br>
+    <h2>Back end</h3>
+</br>
+      <h3 class="font-p"> Ecommerce Back end</h3>
+</br>
+      <img src="./Experience/img/postman.gif" alt="postman" width="500px" height="250px">
+      <p class="section-text">About: This backend should be tested in postman. It's about users, administrators, orders and products</p>
+      <p class="section-text">Technologies: MongoDB, Express, Node.js</p>
+      <p class="section-text">Available for testing<a href="https://drab-pink-leopard-kit.cyclic.app">Visit here</a></p>
+
+    </br>
+  </br>
+</br>
+</br>
+
+<h2>More</h3>
+</br>
+
+    <h3 class="font-p"> VideoGame: Immune</h3>
+</br>
+    <img src="./Experience/img/immune.gif" alt="videogame" width="500px" height="250px">
+    <p class="section-text">About: Videogame available at MicrosoftAppStore </p>
+    <p class="section-text">Technologies: Inkscape,Gimp, Unity</p>
+    <p class="section-text">Only desktop version<a href="https://www.microsoft.com/en-ms/p/immune/9wzdncrdr6x8?activetab=pivot:overviewtab">Visit here</a></p>
 
 
-    
-    <script type="module" src="/main.js">
 
-      
-   
+
+
+         
+
+           
+
+
+
+
+          
+
+            <br>
+
+            <h2 class="font-p">Let's connect</h2>
+              <p class="font-p"><i class="bi bi-envelope-paper"></i>yunameza@outlook.com</p>
+
+              <div style="display: inline-block">
+                <a href="https://www.linkedin.com/in/yunuen-sarasuadi-developer/" target="_blank">
+                  <img src="./Experience/img/Linkedin.jpg" alt="LinkedIn" width="30" height="30">
+                </a>
+              </div>
+
+              <div style="display: inline-block;">
+                <a href="https://github.com/YunuenAM" target="_blank">
+                  <img src="./Experience/img/git.png" alt="git" width="30" height="30">
+                </a>
+
+              </div>
+              
+              
+             </p>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="/main.js">
+
+
+
     createPlayButton();
     createPauseButton();
-   
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-  </body>
+</body>
 
 
 </html>
