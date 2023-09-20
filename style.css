@@ -121,18 +121,21 @@ button {
 .toggle-button{
   cursor: pointer;
   position: relative;
-  width: 56px;
-  height: 28px;
+  width: 80px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--color-pink-light);
   border-radius: 999px;
   margin: 0px ;
-  margin-left: 200px;
+  margin-top: 40px;
+  margin-left: 500px;
   border: none;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+
 
 .toggle-circle{
   position: absolute;
@@ -355,8 +358,8 @@ button {
 /*Image profile*/
 
 .yun{
-  width: 300px; /* Elige el tamaño que desees */
-  height: 300px; /* Elige el tamaño que desees */
+  width: 200px; /* Elige el tamaño que desees */
+  height: 200px; /* Elige el tamaño que desees */
   border-radius: 50%; /* Esto hace que la imagen sea redonda */
   overflow: hidden; /* Oculta cualquier contenido que se salga de la imagen redonda */
   display: flex;
@@ -364,6 +367,15 @@ button {
   align-items: center;
   padding: 30px;
   margin-left: 40%;
+}
+
+.font{
+    font-family: "Dosis";
+}
+
+.font-p{
+  font-family: "Dosis";
+  font-size: 2rem;
 }
 
 
