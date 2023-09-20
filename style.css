@@ -121,7 +121,7 @@ button {
 .toggle-button{
   cursor: pointer;
   position: relative;
-  width: 80px;
+  width: 60px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -132,7 +132,29 @@ button {
   margin-top: 40px;
   margin-left: 500px;
   border: none;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow:  yellowgreen;
+}
+
+.bi-brightness-high{
+  font-size: 20px;
+  padding: 0px;
+  margin-right: 145px;
+  margin-bottom: 8px;
+  margin-left: 60px;
+}
+
+
+.bi-moon-fill{
+  font-size: 15px;
+  padding: 0px;
+  margin-right: 67px;
+  margin-bottom: -2px;
+  margin-top: -8px;
+  margin-left: 60px ;
+}
+
+#moonIcon {
+  display: none; /* Ocultar el icono de la luna en el modo claro */
 }
 
 
@@ -442,6 +464,49 @@ ul li {
 @media screen and (max-width: 768px) {
   .container {
       width: 90%;
+
   }
+
+  .frog {
+    width: 50px;
+  }
+
+  .toggle-button{
+    cursor: pointer;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--color-pink-light);
+    border-radius: 999px;
+    margin: 0px ;
+    margin-top: 40px;
+    margin-left: 180px;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  
+
+  .bi-brightness-high{
+    font-size: 20px;
+    padding: 5px;
+    margin: -30px;
+    margin-top: -10px;
+  }
+
+  .bi-moon-fill{
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 75px;
+    margin-bottom: 130px;
+    margin-top: -8px;
+  }
+
+
+
+
 }
 

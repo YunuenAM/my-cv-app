@@ -229,6 +229,8 @@ const newTitle = document.getElementById("new-title");
 
 
 
+
+
  // Mostrar el elemento con id "welcomeTitle" después de otros 3 segundos (cambiar nuevamente)
  setTimeout(function() {
     welcomeTitle.style.display = "none";
@@ -279,7 +281,15 @@ const newTitle = document.getElementById("new-title");
         }
     
         typeText(); // Llama a typeText para iniciar la animación del texto
-    }
+   }
+
+
+  
+      
+      // Crea una instancia de la clase para iniciar la funcionalidad
+     
+
+
 
 
 
@@ -308,3 +318,4 @@ const newTitle = document.getElementById("new-title");
                     child.material.map.needsUpdate = true;
                 }
             })}}}
+        
