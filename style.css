@@ -490,6 +490,9 @@ ul li {
   .font-p{
     font-size: 20px;
     margin-left: 80px;
+    margin-right: 20px !important;
+  
+
   
     
   }
@@ -511,15 +514,11 @@ ul li {
 
 
   .row.text-align-content-center {
-    margin-left: 10px; /* Ajusta el valor de margen izquierdo según tu preferencia */
-    margin-right: 10px; /* Ajusta el valor de margen derecho según tu preferencia */
+    margin-left: 0px; /* Ajusta el valor de margen izquierdo según tu preferencia */
+    margin-right: 40px; /* Ajusta el valor de margen derecho según tu preferencia */
   }
 
-  /* Asegúrate de que el texto se ajuste al nuevo ancho con margen */
-  .font-p {
-    max-width: calc(100% - 40px); /* Resta el valor total de los márgenes al ancho máximo del texto */
-  }
-  
+
 
 
  
