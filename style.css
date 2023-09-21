@@ -397,8 +397,10 @@ button {
 .font-p{
   font-family: "Dosis";
   font-size: 2rem;
-   }
  
+   }
+
+
  
 
 
@@ -468,6 +470,10 @@ ul li {
   .container {
       width: 90%;
 
+  }
+
+  hr{
+    visibility: hidden;
   }
 
   .formulario {
