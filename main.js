@@ -50,13 +50,11 @@ const form =  document.querySelector("#form")
 
 form.addEventListener("submit", handleSubmit);
 
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('loading');
-  preloader.style.display = 'none';
 
 
 
 
-});
+
+
 
 

@@ -11,29 +11,104 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <!-- Agregar Bootstrap CSS -->
+  <style>
+    /* Estilo del preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Asegura que esté en la parte superior */
+    }
+
+    /* Estilo de la animación de carga */
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 
+  <!-- Agregar Bootstrap CSS -->
 
 
+<div id="preloader">
+
+  <div class="loader"></div>
+
+
+
+</div>
+
+
+
+
+<div class="contenido">
 
 <body class="light-theme">
 
+
+  
+  
+
+
+
+
+ 
+
   <div class="experience">
+    
 
     <canvas class="experience-canvas">
+
+      <div class="preloader">
+        <div class="loader">.</div>
+        <div class="loader">.</div>
+        <div class="loader">.</div>
+      </div>
+
+      <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+     
+
+     
 
     </canvas>
   </div>
 
+   
+ 
+  
 
   <div class="content">
+
+   
 
 
     <div id="textElement"></div>
 
+    
+</div>
 
-  </div>
 
 
 
@@ -217,9 +292,9 @@
       <h3 class="font-p"> Ecommerce Back end</h3>
 </br>
       <img src="./Experience/img/postman.gif" alt="postman" width="500px" height="250px">
-      <p class="section-text">About: This backend should be tested in postman. It's about users, administrators, orders and products</p>
+      <p class="section-text">About: This backend have  been tested in postman. It's about users, administrators, orders and products</p>
       <p class="section-text">Technologies: MongoDB, Express, Node.js</p>
-      <p class="section-text">Available for testing<a href="https://drab-pink-leopard-kit.cyclic.app">Visit here</a></p>
+      <p class="section-text">Available for testing <a href="https://drab-pink-leopard-kit.cyclic.app">Visit here</a></p>
 
     </br>
   </br>
@@ -232,9 +307,9 @@
     <h3 class="font-p"> VideoGame: Immune</h3>
 </br>
     <img src="./Experience/img/immune.gif" alt="videogame" width="500px" height="250px">
-    <p class="section-text">About: Videogame available at MicrosoftAppStore </p>
+    <p class="section-text">About: I was co-creator of a  Videogame available at MicrosoftAppStore </p>
     <p class="section-text">Technologies: Inkscape,Gimp, Unity</p>
-    <p class="section-text">Only desktop version<a href="https://www.microsoft.com/en-ms/p/immune/9wzdncrdr6x8?activetab=pivot:overviewtab">Visit here</a></p>
+    <p class="section-text">Only desktop version <a href="https://www.microsoft.com/en-ms/p/immune/9wzdncrdr6x8?activetab=pivot:overviewtab">Visit here</a></p>
 
 
 
@@ -289,6 +364,9 @@
     </div>
   </div>
 
+  </div>
+
+
 
 
 
@@ -308,6 +386,7 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 </body>
 

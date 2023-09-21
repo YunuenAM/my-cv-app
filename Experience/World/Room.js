@@ -6,11 +6,13 @@ import Theme from "./Theme.js";
 
 
 
+
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper.js";
 
 
 export default class Room {
     constructor() {
+      
         this.experience = new Experience();
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
@@ -43,6 +45,7 @@ export default class Room {
         };
 
         //To create a botton
+        this.preloader();
         this.createPlayButton();
         this.createPauseButton();
         this.animateText()
@@ -56,6 +59,8 @@ export default class Room {
         window.addEventListener("resize", this.handleWindowResize.bind(this))
         this.toggleDarkMode()
         this.handleWindowResize()
+        this.preloader()
+    
       
        
        
@@ -284,13 +289,24 @@ const newTitle = document.getElementById("new-title");
    }
 
 
+  preloader() {
+    
+
+    {
+        let preloader = document.getElementById("preloader");
+        preloader.style.display = "none";
+      }
   
-      
-      // Crea una instancia de la clase para iniciar la funcionalidad
-     
-
-
-
+      // Detectar cuando la página se carga completamente
+      window.addEventListener("load", function () {
+        // Ocultar el preloader después de que la página se haya cargado completamente
+        hidePreloader();
+      });
+    
+    
+    
+}
+ 
 
 
 
