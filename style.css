@@ -473,13 +473,9 @@ ul li {
     transform: scale(0.3);
     margin-top: -50%;
    
-   
-  
  
   }
 
-
- 
 
   .section-beige{
    width: 60%;
@@ -531,6 +527,7 @@ ul li {
 
   .font.justify-content-center{
     margin-left: 70px;
+    margin-top: -30%;
   }
 
 
