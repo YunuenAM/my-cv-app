@@ -134,20 +134,20 @@ svg{
 
 .bi-brightness-high{
   font-size: 20px;
-  padding: 0px;
-  margin-right: 145px;
+  padding: 1px;
+  margin-right: 50px;
   margin-bottom: 8px;
-  margin-left: 60px;
+  margin-left: 120px;
 }
 
 
 .bi-moon-fill{
   font-size: 15px;
-  padding: 0px;
-  margin-right: 67px;
+  padding: 1px;
+  margin-right: 123px;
   margin-bottom: -2px;
   margin-top: -8px;
-  margin-left: 60px ;
+  margin-left: 25px ;
 }
 
 button {
@@ -155,9 +155,6 @@ button {
   color: var(--color-text);
 }
 
-#moonIcon {
-  display: none; /* Ocultar el icono de la luna en el modo claro */
-}
 
 
 
@@ -463,12 +460,24 @@ ul li {
   cursor: pointer;
 }
 
+
+/*Media Screen*/
 @media screen and (max-width: 768px) {
   .container {
       width: 90%;
 
   }
 
+  #animated-text{
+    font-size: 16px !important;
+   text-align:  right !important;
+   background-color: pink;
+   margin-top: 70px;
+   margin-left: 148px;
+
+  }
+
+ 
   .frog {
     width: 50px;
   }
@@ -494,7 +503,7 @@ ul li {
 
   .bi-brightness-high{
     font-size: 20px;
-    padding: 5px;
+    padding: 2px;
     margin: -30px;
     margin-top: -10px;
   }
@@ -502,7 +511,7 @@ ul li {
   .bi-moon-fill{
     font-size: 15px;
     padding: 5px;
-    margin-left: 75px;
+    margin-left: 80px;
     margin-bottom: 130px;
     margin-top: -8px;
   }

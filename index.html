@@ -22,7 +22,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: pink; /* Fondo semitransparente */
+      background-color: #D0D0C6; /* Fondo semitransparente */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,7 +31,7 @@
 
     /* Estilo de la animación de carga */
     @keyframes loading-dots {
-  0%, 20% {
+  0%, 70% {
     opacity: 0.2;
     transform: scale(1);
   }
@@ -50,6 +50,7 @@
   font-size: 6rem;
   margin: 0 5px;
   animation: loading-dots 1s infinite;
+ color: #FF7987;
 }
 
 
@@ -60,7 +61,7 @@
 
 
 <div id="preloader">
-
+  
   <div class="loader">.</div>
   <div class="loader">.</div>
   <div class="loader">.</div>
@@ -334,23 +335,59 @@
             <br>
 
             <h2 class="font-p">Let's connect</h2>
-              <p class="font-p"><i class="bi bi-envelope-paper"></i>yunameza@outlook.com</p>
+           
 
               <div style="display: inline-block">
                 <a href="https://www.linkedin.com/in/yunuen-sarasuadi-developer/" target="_blank">
                   <img src="./Experience/img/Linkedin.jpg" alt="LinkedIn" width="30" height="30">
                 </a>
-              </div>
-
-              <div style="display: inline-block;">
+             
                 <a href="https://github.com/YunuenAM" target="_blank">
                   <img src="./Experience/img/git.png" alt="git" width="30" height="30">
                 </a>
+
+                <a href="https://www.facebook.com/yn.srsd.cst.mz" target="_blank">
+                  <img src="./Experience/img/face.png" alt="facebook" width="30" height="30">
+                </a>
+              </div>
+
+             
+                
+                
 
               </div>
               
               
              </p>
+
+             <div class="container">
+              <h2></h2>
+              <div class="contact-form">
+                  <form id="form" data-swal-title="Success"  
+                  method="POST" action=" ">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required>
+      
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+      
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" rows="4" required></textarea>
+      
+                      <button type="submit">Submit</button>
+                  </form>
+              </div>
+          </div>
+           </div>
+           </div>
+
+          
+
+          
+
+
+
+
 
 
         </div>
