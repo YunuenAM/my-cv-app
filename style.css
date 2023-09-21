@@ -468,6 +468,68 @@ ul li {
 
   }
 
+ 
+
+  .section-beige{
+   width: 60%;
+  }
+
+  .font {
+    font-size: 1.3rem;
+    margin-left: 50px;
+    text-align: center;
+    margin-top: 0px;
+   
+  }
+
+  .yun{
+    width: 150px;
+    height: 150px;
+  }
+
+  .font-p{
+    font-size: 20px;
+    margin-left: 80px;
+  
+    
+  }
+
+  .img-f{
+    margin-bottom: 30%;
+    width: 400px;
+    height: 50px;
+    margin-left:-100px;
+  }
+
+  .img-c{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 50%; /* Ajusta el ancho al contenedor padre (opcional) */
+  height: 50vh; 
+  }
+
+
+  .row.text-align-content-center {
+    margin-left: 10px; /* Ajusta el valor de margen izquierdo según tu preferencia */
+    margin-right: 10px; /* Ajusta el valor de margen derecho según tu preferencia */
+  }
+
+  /* Asegúrate de que el texto se ajuste al nuevo ancho con margen */
+  .font-p {
+    max-width: calc(100% - 40px); /* Resta el valor total de los márgenes al ancho máximo del texto */
+  }
+  
+
+
+ 
+
+  
+
+  
+
+
+
   #animated-text{
     font-size: 16px !important;
    text-align:  right !important;
