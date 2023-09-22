@@ -478,6 +478,15 @@ ul li {
       width: 90%;
 
   }
+  .networking{
+    width: 20px;
+    height: 20px;
+  }
+
+  .networking-b{
+    width: 25px;
+    height: 20px;
+  }
 
   hr{
     visibility: hidden;
