@@ -26,4 +26,4 @@ dist-ssr
 #Variables
 .env
 
-main.js/
+main.js
