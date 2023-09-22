@@ -2,18 +2,18 @@ import "./style.css"
 import Experience from "./Experience/Experience.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 
-
+const apiKey = ""
 
 const handleSubmit = async (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
 
     try {
-        const response = await fetch(e.target.action, {
-            method: e.target.method,
+        const response = await fetch(apiKey, {
+            method: "POST",
             body: form,
             headers: {
                 Accept: 'application/json',
@@ -44,11 +44,17 @@ const handleSubmit = async (e) => {
     }
 };
 
+
+
 const experience = new Experience(document.querySelector(".experience-canvas"));
 
 const form =  document.querySelector("#form")
 
 form.addEventListener("submit", handleSubmit);
+
+// Asigna la API_KEY al atributo action del formulario
+document.getElementById("form").action = apiKey;
+
 
 
 
