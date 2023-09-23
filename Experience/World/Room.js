@@ -62,7 +62,7 @@ export default class Room {
 
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
-        this.handleWindowResize()
+      
         
     
       
@@ -221,15 +221,6 @@ handleThemeChange(theme){
     
 }
 
-handleWindowResize(){
-    const newWidth = window.innerWidth;
-    const newHeight = window.innerHeight;
-
-    this.experience.renderer.setSize(newWidth, newHeight)
-
-    this.experience.camera.aspect = newWidth/newHeight;
-    this.experience.camera.updateProjectionMatrix()
-}
 
 
 
