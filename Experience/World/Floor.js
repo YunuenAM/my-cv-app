@@ -12,13 +12,8 @@ export default class Floor {
 
         this.setFloor();
 
-        // Obtén el elemento HTML que contiene la representación de tu escena
-        this.canvasContainer = document.getElementById("canvas-container");
-
-        // Evita el menú contextual del clic derecho y cualquier tipo de clic
-        this.canvasContainer.addEventListener("contextmenu", (e) => {
-            e.preventDefault();
-        });
+      
+      
 
         // Evita el arrastre en cualquier botón del mouse
         this.canvasContainer.addEventListener("mousedown", (e) => {
