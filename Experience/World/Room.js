@@ -12,6 +12,8 @@ import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHel
 
 export default class Room {
     constructor() {
+
+
       
         this.experience = new Experience();
         this.scene = this.experience.scene;
@@ -44,6 +46,8 @@ export default class Room {
            
         };
 
+         // Agrega un event listener para el evento "DOMContentLoaded"
+    
         //To create a botton
         this.preloader();
         this.createPlayButton();
@@ -54,23 +58,26 @@ export default class Room {
         this.setupVideoTexture();
         this.onMouseMove();
         this.toggleTitles();
+        
 
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
         this.toggleDarkMode()
         this.handleWindowResize()
-        this.preloader()
+        
     
       
        
        
-        
+    
+
+
 
         
         
 
         
-    }
+}
 
     handleThemeChange(theme) {
         if (theme === 'dark') {
@@ -225,27 +232,6 @@ handleWindowResize(){
     this.experience.camera.updateProjectionMatrix()
 }
 
-toggleTitles(){
-
-const welcomeTitle = document.getElementById("welcomeTitle");
-const newTitle = document.getElementById("new-title");
-
-
-
-
-
- // Mostrar el elemento con id "welcomeTitle" después de otros 3 segundos (cambiar nuevamente)
- setTimeout(function() {
-    welcomeTitle.style.display = "none";
-        newTitle.style.display = "block";
-
-        // Mostrar el elemento con id "welcomeTitle" después de otros 3 segundos (cambiar nuevamente)
-        setTimeout(function() {
-            welcomeTitle.style.display = "block";
-            newTitle.style.display = "none";
-        }, 4000); // 3000 milisegundos (3 segundos) para cambiar nuevamente
-    }, 4000); // 3000 milisegundos (3 segundos) para el primer cambio
-}
 
     // Función para cambiar entre el modo claro y oscuro
 
