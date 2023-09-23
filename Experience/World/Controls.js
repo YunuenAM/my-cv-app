@@ -1,4 +1,4 @@
-
+import * as THREE from "three";
 import Experience from "../Experience.js";
 import GSAP from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -23,8 +23,11 @@ export default class Controls {
         this.circleThird = this.experience.world.floor.circleThird;
 
         GSAP.registerPlugin(ScrollTrigger);
-
-        document.querySelector(".page").style.overflow = "visible";
+         // Verificar si el elemento '.page' existe antes de intentar acceder a su propiedad 'style'
+         const pageElement = document.querySelector(".page");
+         if (pageElement) {
+             pageElement.style.overflow = "visible";
+         }
 
         if (
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -36,55 +39,9 @@ export default class Controls {
         this.setScrollTrigger();
     }
 
-    setupASScroll() {
-        // https://github.com/ashthornton/asscroll
-        const asscroll = new ASScroll({
-            ease: 0.1,
-            disableRaf: true,
-        });
+   
 
-        GSAP.ticker.add(asscroll.update);
-
-        ScrollTrigger.defaults({
-            scroller: asscroll.containerElement,
-        });
-
-        ScrollTrigger.scrollerProxy(asscroll.containerElement, {
-            scrollTop(value) {
-                if (arguments.length) {
-                    asscroll.currentPos = value;
-                    return;
-                }
-                return asscroll.currentPos;
-            },
-            getBoundingClientRect() {
-                return {
-                    top: 0,
-                    left: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                };
-            },
-            fixedMarkers: true,
-        });
-
-        asscroll.on("update", ScrollTrigger.update);
-        ScrollTrigger.addEventListener("refresh", asscroll.resize);
-
-        requestAnimationFrame(() => {
-            asscroll.enable({
-                newScrollElements: document.querySelectorAll(
-                    ".gsap-marker-start, .gsap-marker-end, [asscroll]"
-                ),
-            });
-        });
-        return asscroll;
-    }
-
-    setSmoothScroll() {
-        this.asscroll = this.setupASScroll();
-    }
-
+   
     setScrollTrigger() {
         ScrollTrigger.matchMedia({
             //Desktop

@@ -16,9 +16,7 @@ export default class Floor {
       
 
         // Evita el arrastre en cualquier botón del mouse
-        this.canvasContainer.addEventListener("mousedown", (e) => {
-            e.preventDefault();
-        });
+       
     }
     setFloor(){
         this.geometry = new THREE.PlaneGeometry(100,100);
