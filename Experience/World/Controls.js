@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from 'three';
 import Experience from "../Experience.js";
 import GSAP from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -25,21 +25,13 @@ export default class Controls {
          const pageElement = document.querySelector(".page");
          if (pageElement) {
              pageElement.style.overflow = "visible";
-         }
-
-        if (
-            !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                navigator.userAgent
-            )
-        ) {
-            this.setSmoothScroll();
-        }
-  
-    }
+         }}
 
    
   
     resize() {}
 
     update() {}
-}
+        
+
+        }
