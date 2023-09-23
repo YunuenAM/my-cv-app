@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import Experience from "../Experience.js";
 import GSAP from  "gsap";
-import Theme from "./Theme.js";
+
 
 
 
@@ -54,6 +54,8 @@ export default class Room {
         this.setAnimation();
         this.setupVideoTexture();
         this.onMouseMove();
+       
+      
     
         
         
@@ -186,14 +188,6 @@ pauseVideoPlayback() {
     this.pauseButton.style.display = 'none'; // Ocultar botón de pausa
 }
 
-handleThemeChange(){
-    if (theme === 'dark'){
-        this.scene.background= new THREE.Color(0x111111)
-    }else{ 
-        this.scene.background = new THREE.Color(0xffffff)
-    }
-    
-}
 
 
 

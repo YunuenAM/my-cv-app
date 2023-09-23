@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,6 +19,8 @@ span,
 svg{
   transition: background-color 0.5s, color 0.5s;
 }
+
+
 
 :root {
   /* Light Theme Variables */
@@ -48,6 +50,7 @@ svg{
   --color-green: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
 }
+
 
 /* Otros estilos de elementos, como botones, encabezados, etc. */
 
@@ -115,7 +118,7 @@ svg{
   background-color: var(--color-background);
 }
 
-.toggle-button{
+button.toggle-button{
   cursor: pointer;
   position: relative;
   width: 60px;
@@ -130,6 +133,16 @@ svg{
   margin-left: 500px;
   border: none;
   box-shadow:  yellowgreen;
+  
+}
+
+/* Estilos para el botón */
+.toggle-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff; /* Cambia el color del círculo del botón */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .bi-brightness-high{
