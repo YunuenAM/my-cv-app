@@ -57,12 +57,11 @@ export default class Room {
         this.setAnimation();
         this.setupVideoTexture();
         this.onMouseMove();
-        this.toggleTitles();
+        
         
 
         //Add an eventListener for resize
         window.addEventListener("resize", this.handleWindowResize.bind(this))
-        this.toggleDarkMode()
         this.handleWindowResize()
         
     
@@ -233,24 +232,9 @@ handleWindowResize(){
 }
 
 
-    // Función para cambiar entre el modo claro y oscuro
 
-    toggleDarkMode(){
 
-        const darkModeElement = document.body.classList.contains('dark-mode');
-         // Si existe, quita la clase 'dark-mode', si no, agrégala
-    if (darkModeElement) {
-        document.body.classList.remove('dark-mode');
-    } else {
-        document.body.classList.add('dark-mode')
-    }
-
-        document.body.classList.toggle('dark-mode')
-
-        document.querySelector('toggle-button').addEventListener('click', this.toggleDarkMode)
-
-    }
-
+    
     ////////////////////////////////////////////
 
    animateText() {
