@@ -21,16 +21,13 @@ export default class Room {
         this.time = this.experience.time;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
-        this.theme = new Theme();
-        this.theme.on("switch", (newTheme) => {
-            this.handleThemeChange(newTheme);
-    
+        
             this.scene.addEventListener("click", () => {
                 this.openModal();
               });
 
               
-        });
+        
        
         
         this.roomChildren = {};
@@ -57,35 +54,12 @@ export default class Room {
         this.setAnimation();
         this.setupVideoTexture();
         this.onMouseMove();
-        
-        
-
-        //Add an eventListener for resize
-        window.addEventListener("resize", this.handleWindowResize.bind(this))
-      
-        
     
-      
-       
-       
-    
-
-
-
         
-        
-
         
 }
 
-    handleThemeChange(theme) {
-        if (theme === 'dark') {
-            this.scene.background = new THREE.Color(0x111111);
-        } else {
-            this.scene.background = new THREE.Color(255 / 255, 121 / 255, 135 / 255);
-        }
-    }
-   
+  
 
 
     createPlayButton() {
@@ -212,7 +186,7 @@ pauseVideoPlayback() {
     this.pauseButton.style.display = 'none'; // Ocultar botón de pausa
 }
 
-handleThemeChange(theme){
+handleThemeChange(){
     if (theme === 'dark'){
         this.scene.background= new THREE.Color(0x111111)
     }else{ 
