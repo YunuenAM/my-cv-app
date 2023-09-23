@@ -79,9 +79,7 @@ export default class Room {
             this.scene.background = new THREE.Color(255 / 255, 121 / 255, 135 / 255);
         }
     }
-    toggleDarkMode() {
-        this.theme.toggleDarkMode();
-    }
+   
 
 
     createPlayButton() {
