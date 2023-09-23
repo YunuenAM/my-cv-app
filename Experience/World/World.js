@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+
 import Experience from "../Experience.js";
 import Room from "./Room.js"
 import Floor from './Floor.js';

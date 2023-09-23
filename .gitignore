@@ -25,5 +25,7 @@ dist-ssr
 
 #Variables
 .env
-
 main.js
+
+# Local Netlify folder
+.netlify
